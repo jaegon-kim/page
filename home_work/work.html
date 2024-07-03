@@ -1,0 +1,63 @@
+<html>
+<head>
+<script language="javascript">
+<!--
+function reverse(STR){
+	var st=""
+	var len
+	len=STR.input.value.length
+	if( len > 10 )
+	{	
+		alert("입력이 10을 넘어갔습니다.")
+
+		return 
+	}	
+	
+	for(var i=len-1 ; i>=0 ; i--)
+	{
+		st+= STR.input.value.charAt(i);
+	}
+	STR.output.value=st
+}
+//-->
+</script>
+
+</head>
+<body bgcolor="#8f8fdf" text="fffff">
+
+<form name = "String reverse">
+
+   <table width=200 align=center>
+   <tr>
+      <td bgcolor="#1d5dc9">
+         <center><font face="휴먼모음T">
+프로그래밍 과제<br>
+(문자열 역출력)</font><center>
+      </td>  
+   </tr>
+   <tr>
+      <td> &nbsp; </td>
+   </tr>   
+   <tr>
+      <td> 입력 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 출력 </td>
+   </tr>
+   <tr>
+      <td>
+           <input type = "text" name = "input" size=10>
+           <input type = "text" name = "output" size=10>
+      </td>
+   </tr>  
+   <tr>
+      <td>
+            <input type = "button" value = "문자열 역출력" 
+	                           onClick="reverse(this.form)">
+            <input type = "reset" value="Clear">
+       </td>
+    </tr>
+  </table>
+  </form>
+
+<a href='#' onClick='self.close()' ><center><tt>[닫기]</tt></center></a>
+
+</body>
+<html>
