@@ -11,24 +11,24 @@ top
       <td height="45" width="108"> <a href="left.html" target="left">Home</a></td>
   </tr>
   <tr>
-      <td height="45" width="108"><a href="home_work/visiting_board.php" target="left">방명록</a></td>
+      <td height="45" width="108"><a href="home_work/visiting_board.php" target="left">Visit</a></td>
   </tr>
   <tr>
-      <td height="45" width="108"><a href="intro.html" target="left">주인장 소개</a></td>
+      <td height="45" width="108"><a href="intro.html" target="left">Introduction</a></td>
   </tr>
   
   
   <tr>
-      <td height="45" width="108"><a href="interest.html" target="left">관심 분야</a></td>
+      <td height="45" width="108"><a href="interest.html" target="left">Interestings</a></td>
   </tr>
   
   <tr>
       <td height="45" width="108"> <a href="#" onClick="window.open('home_work/work2.php',''
-      ,'width=230,height=350 scrollbars=no menubar=no directories=no,location=no') " >날짜 계산</a></td>
+      ,'width=230,height=350 scrollbars=no menubar=no directories=no,location=no') " >Date Calculation</a></td>
   </tr>
   <tr>
       <td height="54" width="108"> <a href="#" onClick="window.open('home_work/work.html',''
-      ,'width=230,height=350 scrollbars=no menubar=no directories=no,location=no') " >문자열 역출력</a></td>
+      ,'width=230,height=350 scrollbars=no menubar=no directories=no,location=no') " >String Reverse</a></td>
   </tr>
 
 
