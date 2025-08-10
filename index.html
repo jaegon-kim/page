@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JWT 서명 도구 (GitHub Pages)</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    body { max-width: 900px; margin: 40px auto; padding: 0 16px; }
+    h1 { margin-bottom: 8px; }
+    .card { border: 1px solid #ccc; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+    label { font-weight: 600; }
+    textarea { width: 100%; min-height: 180px; }
+    input[type="password"], input[type="text"] { width: 100%; padding: 8px; }
+    button { padding: 10px 14px; border-radius: 10px; border: 1px solid #888; cursor: pointer; }
+    .muted { opacity: .7; font-size: .92rem; }
+    .ok { color: #0a7f2e; }
+    .err { color: #b00020; white-space: pre-wrap; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <h1>JWT 서명 도구</h1>
+  <p class="muted">• <b>RS256</b>으로 JWT에 서명합니다. JWT Payload와 개인키 비밀번호를 입력해 주세요.</p>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label for="payload">JWT Payload (JSON)</label>
+        <textarea id="payload" class="mono" placeholder='{"sub":"user123","name":"Kim","iat":1723200000}'></textarea>
+        <div class="muted">schema.json으로 유효성 검사를 수행합니다.</div>
+      </div>
+      <div>
+        <label for="password">개인키 비밀번호</label>
+        <input type="password" id="password" placeholder="암호화된 개인키 비밀번호" />
+        <div style="height:8px"></div>
+        <button id="btnValidate">1) 스키마 검증</button>
+        <button id="btnSign">2) 서명 & 다운로드</button>
+        <div style="height:12px"></div>
+        <div id="status" class="muted"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>인증서 정보</h3>
+    <div class="muted">아래 값은 cert.pem에서 계산됩니다.</div>
+    <div>SHA-256 Fingerprint: <span id="certFp" class="mono"></span></div>
+    <div>SPKI (SHA-256) 키 지문: <span id="spkiFp" class="mono"></span></div>
+  </div>
+
+  <div class="card">
+    <h3>출력</h3>
+    <div class="muted">서명이 끝나면 JWT(JSON) 파일을 다운로드합니다.</div>
+    <div id="output" class="mono"></div>
+  </div>
+
+  <!-- ESM 앱 코드 -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

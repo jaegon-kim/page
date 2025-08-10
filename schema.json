@@ -1,0 +1,10 @@
+{
+  "$id": "https://example.com/jwt-payload",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["sub"],
+  "properties": {
+    "sub": { "type": "string", "minLength": 1 }
+  }
+}
